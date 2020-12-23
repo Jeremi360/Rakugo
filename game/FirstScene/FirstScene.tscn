@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/FirstScene/FirstDialogue.gd" type="Script" id=1]
+[ext_resource path="res://game/characters/Yui/Yui.tscn" type="PackedScene" id=2]
+
+[node name="FirstScene" type="Node2D"]
+
+[node name="FirstDialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+default_starting_event = "first_dialogue"
+auto_start = true
+
+[node name="Yui" parent="." instance=ExtResource( 2 )]
+position = Vector2( 426.032, 194.542 )
