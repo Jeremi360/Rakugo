@@ -9,8 +9,12 @@ func _ready():
 func first_dialogue():
 	start_event("first_dialogue")
 	
-	say("yui", "Hi, I'm Yui and your are too close.")
-	show("yui happy", {"scale":1})
+	say("yui", "Hi, I'm Yui.")
+	show("yui happy")
+	step()
+	
+	say("yui", "I'm must go.")
+	hide("yui")
 	step()
 #
 #	say (null , "Choose one option.")

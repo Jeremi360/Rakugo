@@ -7,28 +7,36 @@
 [ext_resource path="res://game/characters/Yui/female student 1 - surprised.png" type="Texture" id=5]
 [ext_resource path="res://game/characters/Yui/Yui.gd" type="Script" id=6]
 
-[node name="Yui" type="Node2D" groups=[
-"showable yui *",
-]]
+[node name="Yui" type="Node2D"]
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 6 )
 
-[node name="blush" type="Sprite" parent="."]
+[node name="blush" type="Sprite" parent="." groups=[
+"showable yui blush",
+]]
 position = Vector2( 507.994, 483.194 )
 texture = ExtResource( 3 )
 
-[node name="happy" type="Sprite" parent="."]
+[node name="happy" type="Sprite" parent="." groups=[
+"showable yui happy",
+]]
 position = Vector2( 507.994, 483.194 )
 texture = ExtResource( 4 )
 
-[node name="sad" type="Sprite" parent="."]
+[node name="sad" type="Sprite" parent="." groups=[
+"showable yui sad",
+]]
 position = Vector2( 507.994, 483.194 )
 texture = ExtResource( 2 )
 
-[node name="surprised" type="Sprite" parent="."]
+[node name="surprised" type="Sprite" parent="." groups=[
+"showable yui surprised",
+]]
 position = Vector2( 507.994, 483.194 )
 texture = ExtResource( 5 )
 
-[node name="upset" type="Sprite" parent="."]
+[node name="upset" type="Sprite" parent="." groups=[
+"showable yui upset",
+]]
 position = Vector2( 507.994, 483.194 )
 texture = ExtResource( 1 )
