@@ -1,6 +1,7 @@
 extends Navigation2D
 
 export(float) var character_speed = 400.0
+export(float) var lerp_speed = 50
 export(NodePath) var character_node
 
 onready var _character = get_node(character_node) 
@@ -33,12 +34,14 @@ func _process(delta):
 
 func move_along_path(distance):
 	var last_point = _character.position
+	var delta = get_process_delta_time()
 	while path.size():
 		var distance_between_points = last_point.distance_to(path[0])
 		
 		# the position to move to falls between two points
 		if distance <= distance_between_points:
-			_character.position = last_point.linear_interpolate(path[0], distance / distance_between_points)
+			var next_pos = last_point.linear_interpolate(path[0], distance / distance_between_points)
+			_character.position = lerp(_character.position, next_pos, delta * lerp_speed)
 			return
 		
 		# the position is past the end of the segment
@@ -46,5 +49,5 @@ func move_along_path(distance):
 		last_point = path[0]
 		path.remove(0)
 	# the character reached the end of the path
-	_character.position = last_point
+	_character.position = lerp(_character.position, last_point, delta * lerp_speed)
 	set_process(false)

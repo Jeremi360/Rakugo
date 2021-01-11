@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://gui/Window/Window.gd" type="Script" id=1]
 [ext_resource path="res://gui/InGame/InGameGUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gui/Adventure/Adventure.tscn" type="PackedScene" id=3]
 [ext_resource path="res://gui/Screens/Screens.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/Adventure/cursor/MouseCursor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=6]
 [ext_resource path="res://gui/Window/Loading.gd" type="Script" id=7]
 [ext_resource path="res://gui/Window/LoadingProgressBar.gd" type="Script" id=8]
@@ -45,7 +47,6 @@ __meta__ = {
 
 [node name="InGameGUI" parent="Panel/TabContainer" instance=ExtResource( 2 )]
 visible = false
-mouse_filter = 2
 
 [node name="Loading" type="Control" parent="Panel/TabContainer"]
 visible = false
@@ -91,5 +92,10 @@ margin_right = 511.0
 margin_bottom = 64.0
 script = ExtResource( 8 )
 
+[node name="Adventure" parent="Panel/TabContainer" instance=ExtResource( 3 )]
+visible = false
+
 [node name="QuitScreen" parent="Panel" instance=ExtResource( 9 )]
 visible = false
+
+[node name="MouseCursor" parent="Panel" instance=ExtResource( 5 )]

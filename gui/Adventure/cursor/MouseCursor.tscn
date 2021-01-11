@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://gui/Adventure/MouseCursor.gd" type="Script" id=1]
+[ext_resource path="res://gui/Adventure/cursor/take-up.svg" type="Texture" id=2]
+[ext_resource path="res://gui/Adventure/cursor/look-at.svg" type="Texture" id=3]
+[ext_resource path="res://gui/Adventure/cursor/arrow-cursor.svg" type="Texture" id=4]
+[ext_resource path="res://gui/Adventure/cursor/talk.svg" type="Texture" id=5]
+
+[node name="MouseCursor" type="Node2D"]
+position = Vector2( 0.222725, 0 )
+scale = Vector2( 0.06, 0.06 )
+script = ExtResource( 1 )
+
+[node name="arrow-cursor" type="Sprite" parent="."]
+position = Vector2( 47.2135, 26.0806 )
+texture = ExtResource( 4 )
+
+[node name="Position2D" type="Position2D" parent="arrow-cursor"]
+position = Vector2( -131.779, -220.869 )
+
+[node name="look-at" type="Sprite" parent="."]
+visible = false
+position = Vector2( -4.57837, 12.3516 )
+texture = ExtResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="look-at"]
+position = Vector2( -63.2825, -77.2168 )
+
+[node name="take-up" type="Sprite" parent="."]
+visible = false
+position = Vector2( -40.7208, 44.311 )
+texture = ExtResource( 2 )
+
+[node name="Position2D" type="Position2D" parent="take-up"]
+position = Vector2( -41.9884, 13.3222 )
+
+[node name="talk" type="Sprite" parent="."]
+visible = false
+position = Vector2( 13.1046, 74.0077 )
+texture = ExtResource( 5 )
+
+[node name="Position2D" type="Position2D" parent="talk"]
+position = Vector2( 11.8365, -14.5184 )

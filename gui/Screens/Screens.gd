@@ -15,14 +15,16 @@ func _ready():
 func _on_nav_button_press(nav):
 	match nav:
 		"start":
-			Window.select_ui_tab(1)
+			## need to change in feature
+			Window.select_ui_tab(3)
 			Rakugo.start()
 
 		"continue":
 			if !Rakugo.loadfile("auto"):
 				return
 			else:
-				Window.select_ui_tab(1)
+				## need to change in feature
+				Window.select_ui_tab(3)
 
 		"save":
 			save_menu(get_screenshot())
