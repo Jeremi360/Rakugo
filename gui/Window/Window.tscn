@@ -99,3 +99,4 @@ visible = false
 visible = false
 
 [node name="MouseCursor" parent="Panel" instance=ExtResource( 5 )]
+z_index = 10
